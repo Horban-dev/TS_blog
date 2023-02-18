@@ -15,8 +15,8 @@ export const Header: FC<HeaderProps> = ({ }) => {
         <nav className="px-2 py-4">
             <Container>
                 <div className="mx-auto  max-w-screen-xl flex justify-between items-center">
-                    <Link className="font-montseratt text-2xl ml-40 text-mainColor-blue" to="/">Best Blog</Link>
-                    <ul className="mr-40 flex list-none">
+                    <Link className="font-montseratt text-2xl  text-mainColor-blue" to="/">Best Blog</Link>
+                    <ul className=" flex list-none">
                         <li>
                             <NavLink className={navLinkClasses} to="/home">Home</NavLink>
                         </li>
