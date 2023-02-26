@@ -6,7 +6,7 @@ import { Container } from '../container/container.component';
 import { FeedToggle } from '../feed-toggle/feed-toggle.component';
 import ReactPaginate from 'react-paginate';
 import { serializeSearchParams } from '../../utils/router';
-
+import { TagCloud } from '../tag-cloud/tag-cloud.component';
 
 interface FeedProps { }
 
@@ -22,6 +22,7 @@ export const Feed: FC<FeedProps> = () => {
 
     const { data, error, isLoading, isFetching } = useGetGlobalFeedQuery({
         page,
+        tag: searchParams.get('tag'),
     });
     if (error) {
         return <Container>Something went wrong...</Container>
@@ -51,7 +52,9 @@ export const Feed: FC<FeedProps> = () => {
                         />
                     </nav>
                 </div>
-                <div className="w-1/4">(future tags)</div>
+                <div className="w-1/4 pl-3">
+                    <TagCloud />
+                </div>
             </div>
         </Container>
     );

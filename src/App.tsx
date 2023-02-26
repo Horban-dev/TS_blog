@@ -7,7 +7,7 @@ import bg from './bg.jpg';
 interface nameProps { }
 console.log(bg)
 export const App: FC<nameProps> = ({ }) => {
-  return <div className="bg-[url('./bg.jpg')] bg-cover min-h-screen">
+  return <div className="bg-[url('./bg.jpg')] min-h-screen">
     <Header />
     <Banner />
     <Feed />

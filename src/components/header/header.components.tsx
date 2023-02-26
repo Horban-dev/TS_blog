@@ -11,8 +11,8 @@ export const Header: FC<HeaderProps> = ({ }) => {
             "text-black/50": !isActive,
             "text-black/80": isActive,
         })
-    return <header>
-        <nav className="px-2 py-4">
+    return <header className="bg-[url('./bg.jpg')]">
+        <nav className="px-2 py-4 ">
             <Container>
                 <div className="mx-auto  max-w-screen-xl flex justify-between items-center">
                     <Link className="font-montseratt text-2xl  text-mainColor-blue" to="/">Information Colums</Link>
