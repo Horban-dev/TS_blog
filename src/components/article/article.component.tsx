@@ -7,7 +7,7 @@ import { DateTime } from 'luxon'
 
 interface ArticleProps extends FeedArticle { }
 
-export const Article: FC<ArticleProps> = ({ author, body, slug, description, favoritesCount, createdAt, tagList }) => {
+export const Article: FC<ArticleProps> = ({ author, title, description, favoritesCount, createdAt, tagList }) => {
     return (
         <article>
             <div className="border-t border-black/10 py-6">
@@ -24,7 +24,7 @@ export const Article: FC<ArticleProps> = ({ author, body, slug, description, fav
                             <Link to={`/@${author.username}`} className="font-medium">
                                 {author.username}
                             </Link>
-                            <span className="text-mainColor-gray text-date">
+                            <span className="text-mainColor-mainBlack text-date">
                                 {DateTime.fromISO(createdAt).toLocaleString(DateTime.DATE_MED)}
                             </span>
                         </div>
@@ -32,14 +32,14 @@ export const Article: FC<ArticleProps> = ({ author, body, slug, description, fav
                     <FavoriteButton count={favoritesCount} />
                 </div>
                 <Link to="/article/qwert" className="hover:no-underline">
-                    <h1 className="mb-1 font-semibold text-2xl text-mainColor-darkestGray">
-                        {description}
+                    <h1 className="mb-1 font-semibold text-2xl text-mainColor-mainBlack">
+                        {title}
                     </h1>
-                    <p className="text-mainColor-darkenGray font-light mb-1">
-                        {body}
+                    <p className="text-mainColor-mainBlack font-light mb-1">
+                        {description}
                     </p>
                     <div className="flex justify-between">
-                        <span className="text-mainColor-gray text-date font-light">
+                        <span className="text-mainColor-mainBlack text-date font-light">
                             Read more...
                         </span>
                         <TagList list={tagList} />

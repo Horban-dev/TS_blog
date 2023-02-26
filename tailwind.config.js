@@ -10,13 +10,9 @@ module.exports = {
       },
       colors: {
         mainColor: {
-          blue: '#6495ED',
+          blue: '#2F4F4F',
           darkBlue: '#00008B',
-          lightenGray: '#ddd',
-          gray: '#bbb',
-          darkenGray: '#999',
-          darkestGray: '#373a3c',
-          tag: '#aaa',
+          mainBlack: '#000000',
         }
       }, 
       spacing: {

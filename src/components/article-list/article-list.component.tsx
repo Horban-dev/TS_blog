@@ -8,7 +8,7 @@ interface ArticleListProps {
 
 export const ArticleList: FC<ArticleListProps> = ({ list }) => {
     return (
-        <div className="w-3/4">
+        <div className="w-4/4">
             {list.map(article => (
                 <Article key={article.slug} {...article} />
             ))}

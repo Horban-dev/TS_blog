@@ -9,7 +9,7 @@ export const Banner: FC<BannerProps> = () => {
         <div className="bg-mainColor-blue text-white p-8 mb-8">
             <Container>
                 <h1 className="font-montseratt drop-shadow-logo text-center text-logo pb-2">
-                    Best Blog
+                    Information Colums
                 </h1>
                 <p className="text-center text-2xl font-light">
                     A place to share your knowledge.

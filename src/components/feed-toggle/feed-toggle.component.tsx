@@ -10,7 +10,7 @@ export const FeedToggle: FC<FeedToggleProps> = () => {
                 <li>
                     <NavLink
                         to="/"
-                        className="bg-white border-b-2 border-mainColor-blue py-2 px-4"
+                        className="border-b-2 border-mainColor-blue py-2 px-4"
                     >
                         Global Feed
                     </NavLink>
