@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { FeedArticle } from '../../api/global-feed';
+import { FeedArticle } from '../../../../api/global-feed';
 import { Article } from '../article/article.component';
 
 interface ArticleListProps {

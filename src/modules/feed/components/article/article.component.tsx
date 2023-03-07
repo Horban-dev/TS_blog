@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { TagList } from '../tag-list/tag-list.component';
 import { FavoriteButton } from '../favourite-button/favoutire-button.component';
-import { FeedArticle } from '../../api/global-feed';
+import { FeedArticle } from '../../../../api/global-feed';
 import { DateTime } from 'luxon'
 
 interface ArticleProps extends FeedArticle { }
@@ -21,7 +21,7 @@ export const Article: FC<ArticleProps> = ({ author, title, description, favorite
                             />
                         </Link>
                         <div className="mr-6 ml-0.3 leading-4 inline-flex flex-col">
-                            <Link to={`/@${author.username}`} className="font-medium">
+                            <Link to={`/@${encodeURIComponent(author.username)}`} className="font-medium">
                                 {author.username}
                             </Link>
                             <span className="text-mainColor-mainBlack text-date">

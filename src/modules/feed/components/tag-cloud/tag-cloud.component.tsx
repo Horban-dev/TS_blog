@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { useGetPopularTagsQuery } from '../../api/apis';
+import { useGetPopularTagsQuery } from '../../../../api/apis';
 import { TagList } from '../tag-list/tag-list.component';
 
 interface TagCloudProps { }

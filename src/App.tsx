@@ -1,15 +1,21 @@
 /* eslint-disable no-template-curly-in-string */
 import { FC } from "react";
-import { Banner } from "./components/banner/banner.component";
-import { Feed } from "./components/feed/feed.component";
-import { Header } from "./components/header/header.components";
+import { Route, Routes } from 'react-router-dom';
+import { Header } from "./modules/feed/components/header/header.components";
+import { GlobalFeedPage } from "./modules/feed/pages/global-feed.page";
+import { ProfilePage } from "./modules/profile/components/pages/profile.page";
 import bg from './bg.jpg';
-interface nameProps { }
-console.log(bg)
-export const App: FC<nameProps> = ({ }) => {
-  return <div className="bg-[url('./bg.jpg')] min-h-screen">
-    <Header />
-    <Banner />
-    <Feed />
-  </div>
+interface AppProps { }
+
+export const App: FC<AppProps> = () => {
+  return (
+    <div className="bg-[url('./bg.jpg')] min-h-screen">
+      <Header />
+      <Routes>
+        <Route path="/" element={<GlobalFeedPage />} />
+        <Route path="/@:profile" element={<ProfilePage />} />
+        <Route path="/@:profile/favorites" element={<ProfilePage />} />
+      </Routes>
+    </div>
+  )
 }
